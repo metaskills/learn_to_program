@@ -1,0 +1,15 @@
+%ul#errors
+  - @article.errors.full_messages.each do |error|
+    %li= error
+  
+- form_for @article do |f|
+  
+  %div
+    = f.label :title, 'Your title'
+    = f.text_field :title
+  
+  %div
+    = f.label :body
+    = f.text_area :body
+  
+  = f.submit submit_title
